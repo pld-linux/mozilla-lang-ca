@@ -1,0 +1,8 @@
+skin,install,url,jar:resource:/chrome/softcatala.jar!/
+skin,install,url,jar:resource:/chrome/softcatala.jar!/skin/
+skin,install,url,jar:resource:/chrome/softcatala.jar!/skin/softcatala/
+skin,install,url,jar:resource:/chrome/softcatala.jar!/skin/softcatala/global/
+skin,install,url,jar:resource:/chrome/softcatala.jar!/skin/softcatala/communicator/
+skin,install,url,jar:resource:/chrome/softcatala.jar!/skin/softcatala/editor/
+skin,install,url,jar:resource:/chrome/softcatala.jar!/skin/softcatala/messenger/
+skin,install,url,jar:resource:/chrome/softcatala.jar!/skin/softcatala/navigator/
