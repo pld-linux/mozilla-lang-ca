@@ -9,7 +9,7 @@ Version:	1.7.5
 #%%define	bver	b
 # use "Alpha", "Beta" or %{nil}
 %define	fver	%{nil}
-Release:	%{?bver:0.%{bver}.}0.1
+Release:	%{?bver:0.%{bver}.}1
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://ftp.mozilla.org/pub/mozilla.org/mozilla/l10n/lang/moz%{shortversion}/mozilla-%{version}.ca-AD.langpack.xpi
