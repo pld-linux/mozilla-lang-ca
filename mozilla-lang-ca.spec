@@ -3,8 +3,8 @@ Summary(ca):	Recursos catalans per a Mozilla
 Summary(es):	Recursos catalanes para Mozilla
 Summary(pl):	Kataloñskie pliki jêzykowe dla Mozilli
 Name:		mozilla-lang-ca
-Version:	1.7.5
-%define		shortversion	1.75
+Version:	1.7.6
+%define		shortversion	1.76
 # use "a", "b", or undefined
 #%%define	bver	b
 # use "Alpha", "Beta" or %{nil}
@@ -13,7 +13,7 @@ Release:	%{?bver:0.%{bver}.}1
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://ftp.mozilla.org/pub/mozilla.org/mozilla/l10n/lang/moz%{shortversion}/mozilla-%{version}.ca-AD.langpack.xpi
-# Source0-md5:	561f078c0300027e92f31dbce58ef9e6
+# Source0-md5:	7691e49f3e9e394a3acb5aa31abac424
 Source1:	%{name}-installed-chrome.txt
 Source2:	softcatala-installed-chrome.txt
 URL:		http://www.softcatala.org/projectes/mozilla/
