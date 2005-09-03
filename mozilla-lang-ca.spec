@@ -3,8 +3,8 @@ Summary(ca):	Recursos catalans per a Mozilla
 Summary(es):	Recursos catalanes para Mozilla
 Summary(pl):	Kataloñskie pliki jêzykowe dla Mozilli
 Name:		mozilla-lang-ca
-Version:	1.7.6
-%define		shortversion	1.76
+Version:	1.7.11
+%define		shortversion	1.711
 # use "a", "b", or undefined
 #%%define	bver	b
 # use "Alpha", "Beta" or %{nil}
@@ -12,8 +12,9 @@ Version:	1.7.6
 Release:	%{?bver:0.%{bver}.}1
 License:	GPL
 Group:		X11/Applications/Networking
-Source0:	http://ftp.mozilla.org/pub/mozilla.org/mozilla/l10n/lang/moz%{shortversion}/mozilla-%{version}.ca-AD.langpack.xpi
-# Source0-md5:	7691e49f3e9e394a3acb5aa31abac424
+#Source0:	http://ftp.mozilla.org/pub/mozilla.org/mozilla/l10n/lang/moz%{shortversion}/mozilla-%{version}.ca-AD.langpack.xpi
+Source0:	http://www.softcatala.org/fitxers/linux/mozilla-%{version}.ca-AD.langpack.xpi
+# Source0-md5:	6b2db8ea6eec0a14de81b072afb5b227
 Source1:	%{name}-installed-chrome.txt
 Source2:	softcatala-installed-chrome.txt
 URL:		http://www.softcatala.org/projectes/mozilla/
@@ -23,11 +24,11 @@ Requires(post,postun):	mozilla <= 5:%{version}
 Requires(post,postun):	textutils
 Requires:	mozilla >= 5:%{version}%{?bver}
 Requires:	mozilla <= 5:%{version}
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # %{_libdir}/mozilla/chrome is symlink pointing to the following
 %define	_chromedir	%{_datadir}/mozilla/chrome
-%define _myspelldir	%{_libdir}/mozilla/components/myspell
 
 %description
 Catalan resources for Mozilla.
@@ -64,16 +65,15 @@ Adaptacia motywu Classic.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_chromedir},%{_datadir}/mozilla/{searchplugins,defaults/{messenger,profile}},%{_myspelldir}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_chromedir},%{_datadir}/mozilla/{searchplugins,defaults/{messenger,profile}}}
 
-unzip %{SOURCE0} -d $RPM_BUILD_ROOT%{_libdir}
-mv -f $RPM_BUILD_ROOT%{_libdir}/chrome/* $RPM_BUILD_ROOT%{_chromedir}
-mv -f $RPM_BUILD_ROOT%{_libdir}/myspell/* $RPM_BUILD_ROOT%{_myspelldir}
-mv -f $RPM_BUILD_ROOT%{_libdir}/searchplugins/* \
+unzip %{SOURCE0} -d $RPM_BUILD_ROOT%{_datadir}
+mv -f $RPM_BUILD_ROOT%{_datadir}/chrome/* $RPM_BUILD_ROOT%{_chromedir}
+mv -f $RPM_BUILD_ROOT%{_datadir}/searchplugins/* \
 	$RPM_BUILD_ROOT%{_datadir}/mozilla/searchplugins
-mv -f $RPM_BUILD_ROOT%{_libdir}/defaults/messenger/* \
+mv -f $RPM_BUILD_ROOT%{_datadir}/defaults/messenger/* \
 	$RPM_BUILD_ROOT%{_datadir}/mozilla/defaults/messenger
-mv -f $RPM_BUILD_ROOT%{_libdir}/defaults/profile/* \
+mv -f $RPM_BUILD_ROOT%{_datadir}/defaults/profile/* \
 	$RPM_BUILD_ROOT%{_datadir}/mozilla/defaults/profile
 
 # entries already in mozilla
@@ -108,7 +108,6 @@ cat *-installed-chrome.txt >installed-chrome.txt
 %{_chromedir}/AD.jar
 %{_chromedir}/%{name}-installed-chrome.txt
 %{_datadir}/mozilla/searchplugins/*
-%{_myspelldir}/*
 %{_datadir}/mozilla/defaults/messenger/AD
 %{_datadir}/mozilla/defaults/profile/AD
 
