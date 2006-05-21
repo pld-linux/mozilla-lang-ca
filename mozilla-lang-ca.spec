@@ -4,26 +4,26 @@ Summary(es):	Recursos catalanes para Mozilla
 Summary(pl):	Kataloñskie pliki jêzykowe dla Mozilli
 Name:		mozilla-lang-ca
 Version:	1.7.12
-#define		shortversion	1.712
+%define		mozversion	1.7.13
+%define		shortversion	1.712
 # use "a", "b", or undefined
 #%%define	bver	b
 # use "Alpha", "Beta" or %{nil}
 %define	fver	%{nil}
-Release:	%{?bver:0.%{bver}.}1
+Release:	%{?bver:0.%{bver}.}2
 License:	GPL
 Group:		X11/Applications/Networking
-#Source0:	http://ftp.mozilla.org/pub/mozilla.org/mozilla/l10n/lang/moz%{shortversion}/mozilla-%{version}.ca-AD.langpack.xpi
-Source0:	http://www.softcatala.org/fitxers/linux/mozilla-%{version}.ca-AD.langpack.xpi
+Source0:	http://ftp.mozilla.org/pub/mozilla.org/mozilla/l10n/lang/moz%{shortversion}/mozilla-%{version}.ca-AD.langpack.xpi
 # Source0-md5:	72bb62419f2a7828893ee9a437ef481f
 Source1:	%{name}-installed-chrome.txt
 Source2:	softcatala-installed-chrome.txt
 URL:		http://www.softcatala.org/projectes/mozilla/
 BuildRequires:	unzip
-Requires(post,postun):	mozilla >= 5:%{version}%{?bver}
-Requires(post,postun):	mozilla <= 5:%{version}
+Requires(post,postun):	mozilla >= 5:%{mozversion}%{?bver}
+Requires(post,postun):	mozilla <= 5:%{mozversion}
 Requires(post,postun):	textutils
-Requires:	mozilla >= 5:%{version}%{?bver}
-Requires:	mozilla <= 5:%{version}
+Requires:	mozilla >= 5:%{mozversion}%{?bver}
+Requires:	mozilla <= 5:%{mozversion}
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
