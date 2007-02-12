@@ -1,7 +1,7 @@
 Summary:	Catalan resources for Mozilla
-Summary(ca):	Recursos catalans per a Mozilla
-Summary(es):	Recursos catalanes para Mozilla
-Summary(pl):	Kataloñskie pliki jêzykowe dla Mozilli
+Summary(ca.UTF-8):   Recursos catalans per a Mozilla
+Summary(es.UTF-8):   Recursos catalanes para Mozilla
+Summary(pl.UTF-8):   KataloÅ„skie pliki jÄ™zykowe dla Mozilli
 Name:		mozilla-lang-ca
 Version:	1.7.12
 %define		mozversion	1.7.13
@@ -33,32 +33,32 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Catalan resources for Mozilla.
 
-%description -l ca
+%description -l ca.UTF-8
 Recursos catalans per a Mozilla.
 
-%description -l es
+%description -l es.UTF-8
 Recursos catalanes para Mozilla.
 
-%description -l pl
-Kataloñskie pliki jêzykowe dla Mozilli.
+%description -l pl.UTF-8
+KataloÅ„skie pliki jÄ™zykowe dla Mozilli.
 
 %package -n mozilla-theme-softcatala
 Summary:	Softcatala theme
-Summary(ca):	Tema de Softcatalà
-Summary(es):	Tema de Softcatala
-Summary(pl):	Motyw Softcatala
+Summary(ca.UTF-8):   Tema de SoftcatalÃ 
+Summary(es.UTF-8):   Tema de Softcatala
+Summary(pl.UTF-8):   Motyw Softcatala
 Group:		X11/Applications/Networking
 
 %description -n mozilla-theme-softcatala
 Classic theme adaptation.
 
-%description -n mozilla-theme-softcatala -l ca
-Una adaptació del tema Classic.
+%description -n mozilla-theme-softcatala -l ca.UTF-8
+Una adaptaciÃ³ del tema Classic.
 
-%description -n mozilla-theme-softcatala -l es
-Una adaptación del tema Classic.
+%description -n mozilla-theme-softcatala -l es.UTF-8
+Una adaptaciÃ³n del tema Classic.
 
-%description -n mozilla-theme-softcatala -l pl
+%description -n mozilla-theme-softcatala -l pl.UTF-8
 Adaptacia motywu Classic.
 
 %prep
