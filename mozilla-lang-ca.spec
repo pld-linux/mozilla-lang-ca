@@ -1,7 +1,7 @@
 Summary:	Catalan resources for Mozilla
-Summary(ca.UTF-8):   Recursos catalans per a Mozilla
-Summary(es.UTF-8):   Recursos catalanes para Mozilla
-Summary(pl.UTF-8):   Katalońskie pliki językowe dla Mozilli
+Summary(ca.UTF-8):	Recursos catalans per a Mozilla
+Summary(es.UTF-8):	Recursos catalanes para Mozilla
+Summary(pl.UTF-8):	Katalońskie pliki językowe dla Mozilli
 Name:		mozilla-lang-ca
 Version:	1.7.12
 %define		mozversion	1.7.13
@@ -44,9 +44,9 @@ Katalońskie pliki językowe dla Mozilli.
 
 %package -n mozilla-theme-softcatala
 Summary:	Softcatala theme
-Summary(ca.UTF-8):   Tema de Softcatalà
-Summary(es.UTF-8):   Tema de Softcatala
-Summary(pl.UTF-8):   Motyw Softcatala
+Summary(ca.UTF-8):	Tema de Softcatalà
+Summary(es.UTF-8):	Tema de Softcatala
+Summary(pl.UTF-8):	Motyw Softcatala
 Group:		X11/Applications/Networking
 
 %description -n mozilla-theme-softcatala
